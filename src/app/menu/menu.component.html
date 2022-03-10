@@ -1,0 +1,22 @@
+<header>
+    <div id="menu">
+        <img [src]="logo" [alt]="title">
+        <h1>{{ title }}</h1>
+    </div>
+
+    <div id="boutton">
+        <div>
+            <button (click)="onMCompanies()" type="button" class="btn btn-success">animeaux de companie</button>
+        </div>
+        <div id="bouttonCentre">    
+            <button (click)="onPnj()" type="button" class="btn btn-warning">pnj</button>
+        </div>
+        <div>
+            <button (click)="onMHostiles()" type="button" class="btn btn-danger">mobs hostiles</button>
+        </div>    
+</div>
+</header>
+<p>{{ test1 }}</p>
+<p>{{ test2 }}</p>
+<p>{{ test3 }}</p>
+
