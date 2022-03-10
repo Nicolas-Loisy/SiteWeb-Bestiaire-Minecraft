@@ -9,6 +9,9 @@ export class MenuComponent implements OnInit {
 
   title! : string;
   logo : string = "assets/img/logo.gif";
+  vache : string = "assets/img/vache.png"
+  pnj : string = "assets/img/pnj.png"
+  creeper : string = "assets/img/creeper.png"
 
   test1:number = 0;
   test2:number = 0;
@@ -20,7 +23,7 @@ export class MenuComponent implements OnInit {
     this.title = 'Bestiaire Minecraft';
   }
 
-  onMCompanies(){
+  onAnimaux(){
     this.test1++;
   }
 
@@ -28,7 +31,7 @@ export class MenuComponent implements OnInit {
     this.test2++;
   }
 
-  onMHostiles(){
+  onMobs(){
     this.test3++;
   }
 

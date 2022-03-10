@@ -3,7 +3,6 @@ header{
     
     #menu{
         display: flex;
-        margin-bottom: 10px;
         justify-content: space-between;
 
         img{
@@ -19,15 +18,23 @@ header{
     #boutton{
         display: flex; 
         justify-content:center;
-        padding: 10px;
+        padding-bottom: 10px;
     }    
 
     #bouttonCentre{
         padding-left: 10px;
-        padding-right: 10px;
+        padding-right: 10px;      
     }
 
     button{
         padding: 10px 20px;
+    }
+
+    .divB{
+        display: grid;
+        img{
+            width: 125px;
+            height: 100px;
+        }
     }
 }

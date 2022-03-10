@@ -5,14 +5,17 @@
     </div>
 
     <div id="boutton">
-        <div>
-            <button (click)="onMCompanies()" type="button" class="btn btn-success">animeaux de companie</button>
+        <div class="divB">
+            <img [src]="vache" [alt]="title">
+            <button (click)="onAnimaux()" type="button" class="btn btn-success">Animaux</button>
         </div>
-        <div id="bouttonCentre">    
-            <button (click)="onPnj()" type="button" class="btn btn-warning">pnj</button>
+        <div id="bouttonCentre" class="divB">    
+            <img [src]="pnj" [alt]="title">
+            <button (click)="onPnj()" type="button" class="btn btn-warning">Pnj</button>
         </div>
-        <div>
-            <button (click)="onMHostiles()" type="button" class="btn btn-danger">mobs hostiles</button>
+        <div class="divB">
+            <img [src]="creeper" [alt]="title">
+            <button (click)="onMobs()" type="button" class="btn btn-danger">Mobs</button>
         </div>    
 </div>
 </header>
