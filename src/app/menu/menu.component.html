@@ -1,0 +1,25 @@
+<header>
+    <div id="menu">
+        <img [src]="logo" [alt]="title">
+        <h1>{{ title }}</h1>
+    </div>
+
+    <div id="boutton">
+        <div class="divB">
+            <img [src]="vache" [alt]="title">
+            <button (click)="onAnimaux()" type="button" class="btn btn-success">Animaux</button>
+        </div>
+        <div id="bouttonCentre" class="divB">    
+            <img [src]="pnj" [alt]="title">
+            <button (click)="onPnj()" type="button" class="btn btn-warning">Pnj</button>
+        </div>
+        <div class="divB">
+            <img [src]="creeper" [alt]="title">
+            <button (click)="onMobs()" type="button" class="btn btn-danger">Mobs</button>
+        </div>    
+</div>
+</header>
+<p>{{ test1 }}</p>
+<p>{{ test2 }}</p>
+<p>{{ test3 }}</p>
+
