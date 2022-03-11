@@ -1,0 +1,51 @@
+
+
+img {
+    margin-top: 15px;
+    height: 100px;
+}
+
+.fond {
+    background-color: #000000d7;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+
+.descr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 35px;
+    margin-right: 15px;
+    height: auto;
+    display: inline-block;
+    
+    vertical-align: middle;
+
+    color: rgb(255, 255, 255);
+    
+    /*white-space: nowrap;      /*keep text on one line */
+    //overflow: hidden;         /*prevent text from being shown outside the border */
+    //text-overflow: ellipsis;
+}
+
+
+h3{
+    text-align: center;
+    color: white;
+}
+h4 {
+    text-align: center;
+    color: white;
+
+}

@@ -1,25 +1,27 @@
+<!--
 <h2>{{title}}</h2>
 <p>{{nature}}</p>
+<img src="{{image}}" alt="">
 <p>{{description}}</p>
+!-->
 
-
-<div class="row mb-3">
+<!-- *ngIf="mobCard.type === 'mob'" -->
+<div   class="row mb-3">
     <a>
-        <div class="container">
-            <div class="row fond p-3">
-                <div class="col-6 col-md-4">
-                    <!--<img src=" alt="imgVoiture"> !-->
+        <div class="container" style="margin-bottom: 10px;">
+            <div class="row fond p-3 ">
+                <div class="col-sm-3 col-md-2 text-center">
+                    <img [src]="mobCard.image" [alt]="mobCard.title">
+                    <h3>{{mobCard.title}}</h3>
+                    <h4>{{mobCard.nature}}</h4>
                 </div>
-                <div class="col-6 col-md-8">
-                    <h3>{{title}}</h3>
+                <div class="col-sm-9 col-md-10">
                     <span class="descr">
-                            {{description}}
-                        </span>
+                             {{mobCard.description}}
+                    </span>
                 </div>
             </div>
         </div>
-
     </a>
 </div>
 
-<button type="button" class="btn btn-primary">yo</button>
