@@ -36,6 +36,62 @@ export class AppComponent implements OnInit{
         nature: "Hostile",
         type : "mob"
       }
+      ,{
+        title: "Abeille",
+        description: "Les abeilles sont des animaux paissible, non agressif, que l'on trouve naturellement dans les plaines et forêts de fleurs. Les abeilles vivent naturellement dans des nids (ruche) qui se trouvent naturellement dans les arbres de ces biomes. jusqu'à 3 abeilles peuvent habiter dans haque nid. La journée, les abeilles sortent de la ruche pour butiner les fleurs. ",
+        image: "assets/img/Bee_types.gif",
+        nature: "Neutre",
+        type : "animal"
+      },
+      {
+        title: "Ender Dragon",
+        description: "L'Ender Dragon est le premier boss ajouté à Minecraft. Il apparait dans le monde The End et est le seul moyen de le quitter. Il se régénère automatiquement grâce aux Ender Crystaux. Lorsqu'on tue un dragon il apporte 12 000 points d'expérience ainsi qu'un portail vers la fin du jeu et son générique de fin. Il n'y a qu'un seul et unique Ender Dragon par partie. Depuis la version 1.9, il est possible de faire réapparaitre l'Ender Dragon.",
+        image: "assets/img/"+"Ender_Dragon.gif",
+        nature: "Hostile",
+        type : "mob"
+      },
+      {
+        title: "Abeille",
+        description: "Les abeilles sont des animaux paissible, non agressif, que l'on trouve naturellement dans les plaines et forêts de fleurs. Les abeilles vivent naturellement dans des nids (ruche) qui se trouvent naturellement dans les arbres de ces biomes. jusqu'à 3 abeilles peuvent habiter dans haque nid. La journée, les abeilles sortent de la ruche pour butiner les fleurs. ",
+        image: "assets/img/Bee_types.gif",
+        nature: "Neutre",
+        type : "animal"
+      },
+      {
+        title: "Ender Dragon",
+        description: "L'Ender Dragon est le premier boss ajouté à Minecraft. Il apparait dans le monde The End et est le seul moyen de le quitter. Il se régénère automatiquement grâce aux Ender Crystaux. Lorsqu'on tue un dragon il apporte 12 000 points d'expérience ainsi qu'un portail vers la fin du jeu et son générique de fin. Il n'y a qu'un seul et unique Ender Dragon par partie. Depuis la version 1.9, il est possible de faire réapparaitre l'Ender Dragon.",
+        image: "assets/img/"+"Ender_Dragon.gif",
+        nature: "Hostile",
+        type : "mob"
+      },
+      {
+        title: "Abeille",
+        description: "Les abeilles sont des animaux paissible, non agressif, que l'on trouve naturellement dans les plaines et forêts de fleurs. Les abeilles vivent naturellement dans des nids (ruche) qui se trouvent naturellement dans les arbres de ces biomes. jusqu'à 3 abeilles peuvent habiter dans haque nid. La journée, les abeilles sortent de la ruche pour butiner les fleurs. ",
+        image: "assets/img/Bee_types.gif",
+        nature: "Neutre",
+        type : "animal"
+      },
+      {
+        title: "Ender Dragon",
+        description: "L'Ender Dragon est le premier boss ajouté à Minecraft. Il apparait dans le monde The End et est le seul moyen de le quitter. Il se régénère automatiquement grâce aux Ender Crystaux. Lorsqu'on tue un dragon il apporte 12 000 points d'expérience ainsi qu'un portail vers la fin du jeu et son générique de fin. Il n'y a qu'un seul et unique Ender Dragon par partie. Depuis la version 1.9, il est possible de faire réapparaitre l'Ender Dragon.",
+        image: "assets/img/"+"Ender_Dragon.gif",
+        nature: "Hostile",
+        type : "mob"
+      },
+      {
+        title: "Abeille",
+        description: "Les abeilles sont des animaux paissible, non agressif, que l'on trouve naturellement dans les plaines et forêts de fleurs. Les abeilles vivent naturellement dans des nids (ruche) qui se trouvent naturellement dans les arbres de ces biomes. jusqu'à 3 abeilles peuvent habiter dans haque nid. La journée, les abeilles sortent de la ruche pour butiner les fleurs. ",
+        image: "assets/img/Bee_types.gif",
+        nature: "Neutre",
+        type : "animal"
+      },
+      {
+        title: "Ender Dragon",
+        description: "L'Ender Dragon est le premier boss ajouté à Minecraft. Il apparait dans le monde The End et est le seul moyen de le quitter. Il se régénère automatiquement grâce aux Ender Crystaux. Lorsqu'on tue un dragon il apporte 12 000 points d'expérience ainsi qu'un portail vers la fin du jeu et son générique de fin. Il n'y a qu'un seul et unique Ender Dragon par partie. Depuis la version 1.9, il est possible de faire réapparaitre l'Ender Dragon.",
+        image: "assets/img/"+"Ender_Dragon.gif",
+        nature: "Hostile",
+        type : "mob"
+      }
     ];
 
 /*

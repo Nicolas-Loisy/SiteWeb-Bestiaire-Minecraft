@@ -1,18 +1,28 @@
 header{
-    background-color: rgb(59, 133, 38);
-    
+    //background-color: rgb(59, 133, 38);
+    background-image: url('/assets/img/bg-wool-dark.png');
+    background-attachment: fixed;
+
     #menu{
         display: flex;
         justify-content: space-between;
+        padding: 20px;
 
         img{
-            width: 5%;
-            height: 5%;
+            width: auto;
+            height: 60px;
+            margin-top: 10px;
         }
 
         h1{
             margin-right: 42%;
+            text-align: center;
+            color: rgb(255, 255, 255);
         }
+    }
+
+    #logo{
+        margin-top: 0px;
     }
 
     #boutton{
