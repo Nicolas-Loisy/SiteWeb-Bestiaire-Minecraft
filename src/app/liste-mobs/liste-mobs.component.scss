@@ -7,4 +7,23 @@ main{
         //color:rgb(59, 133, 38);
         color: black;
     }
+
+    #hautDePage{
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+        padding: 0px;
+
+        margin-right:5px;
+
+        background: transparent;
+        border: none !important;
+
+        img{
+            margin: 0px;
+            padding:0px;
+            width: 100px;
+            height: 100px;
+        }
+    }
 }

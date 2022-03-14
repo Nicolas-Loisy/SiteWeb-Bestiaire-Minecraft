@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit, Input , OnChanges } from '@angular/core';
 import { MobCard } from '../models/mob-card.model';
 
@@ -15,11 +16,10 @@ export class ListeMobsComponent implements OnInit {
 
   titre : string = ""
 
-  //myMobCard1!: MobCard;
-  //myMobCard2!: MobCard;
-  //myMobCard3!: MobCard;
+  imgHautDePage : string = "assets/img/scrollToTop.png";
 
-  constructor() { }
+
+  constructor(private scroller : ViewportScroller) { }
 
   changerAffichage(){
     if(this.typeAAfficher == "tout"){
@@ -45,6 +45,11 @@ export class ListeMobsComponent implements OnInit {
   ngOnChanges(typeAAfficher : string){
     this.changerAffichage();
   }
+
+  scrollToTop() {
+    this.scroller.scrollToPosition([0,0]);
+  }
+
 
   ngOnInit() {
     this.myMobCards = [
