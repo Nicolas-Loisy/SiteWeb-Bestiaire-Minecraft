@@ -16,7 +16,7 @@ export class ListeMobsComponent implements OnInit {
 
   titre : string = ""
 
-  imgHautDePage : string = "assets/img/scrollToTop.png";
+  imgHautDePage : string = "assets/img/scrollToTop1.png";
 
 
   constructor(private scroller : ViewportScroller) { }
