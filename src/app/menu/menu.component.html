@@ -13,15 +13,15 @@
                         <div id="boutton">
                             <div class="divB">
                                 <img [src]="vache" [alt]="title">
-                                <button (click)="onAnimaux()" type="button" class="btn btn-success">Animaux</button>
+                                <button (click)="onAnimaux()" type="button" class="btn btn-success">{{texteAnimaux}}</button>
                             </div>
                             <div id="bouttonCentre" class="divB">    
                                 <img [src]="pnj" [alt]="title">
-                                <button (click)="onPnj()" type="button" class="btn btn-warning">Pnj</button>
+                                <button (click)="onPnj()" type="button" class="btn btn-warning">{{textePnj}}</button>
                             </div>
                             <div class="divB">
                                 <img [src]="creeper" [alt]="title">
-                                <button (click)="onMobs()" type="button" class="btn btn-danger">Mobs</button>
+                                <button (click)="onMobs()" type="button" class="btn btn-danger">{{texteMobs}}</button>
                             </div>    
                         </div>
                     </div>
@@ -53,7 +53,4 @@
     </div>
     -->
 </header>
-<p>{{ test1 }}</p>
-<p>{{ test2 }}</p>
-<p>{{ test3 }}</p>
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -13,9 +13,11 @@ export class MenuComponent implements OnInit {
   pnj : string = "assets/img/pnj.png"
   creeper : string = "assets/img/creeper.png"
 
-  test1:number = 0;
-  test2:number = 0;
-  test3:number = 0;
+  texteAnimaux : string = "Animaux"
+  textePnj : string = "Pnj"
+  texteMobs : string = "Mobs"
+
+  @Output() typeEvent = new EventEmitter<string>()
 
   constructor() { }
 
@@ -24,15 +26,42 @@ export class MenuComponent implements OnInit {
   }
 
   onAnimaux(){
-    this.test1++;
+    if(this.texteAnimaux == "Animaux"){
+      this.texteAnimaux = "Tout";
+      this.textePnj = "Pnj";
+      this.texteMobs = "Mobs";
+      this.typeEvent.emit("animal");
+    }
+    else{
+      this.texteAnimaux = "Animaux";
+      this.typeEvent.emit("tout");
+    }
   }
 
-  onPnj(){
-    this.test2++;
+  onPnj(){   
+    if(this.textePnj == "Pnj"){
+      this.textePnj = "Tout";
+      this.texteAnimaux = "Animaux";
+      this.texteMobs = "Mobs";
+      this.typeEvent.emit("pnj");
+    }
+    else{
+      this.textePnj = "Pnj";
+      this.typeEvent.emit("tout");
+    }
   }
 
   onMobs(){
-    this.test3++;
+    if(this.texteMobs == "Mobs"){
+      this.texteMobs = "Tout";
+      this.texteAnimaux = "Animaux";
+      this.textePnj = "Pnj";
+      this.typeEvent.emit("mob");
+    }
+    else{
+      this.texteMobs = "Mobs";
+      this.typeEvent.emit("tout");
+    }
   }
 
 }
