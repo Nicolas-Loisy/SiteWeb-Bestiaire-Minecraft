@@ -7,6 +7,8 @@ header{
     //background-image: url('/assets/img/2984632.png');
     //background-size: 400px;
 
+
+
     #menu{
         display: flex;
         justify-content: space-between;
@@ -27,6 +29,12 @@ header{
 
     #logo{
         margin-top: 0px;
+
+        button{
+            background: transparent;
+            border: none !important;
+        }
+
     }
 
     #boutton{

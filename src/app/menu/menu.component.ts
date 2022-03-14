@@ -25,6 +25,13 @@ export class MenuComponent implements OnInit {
     this.title = 'Bestiaire Minecraft';
   }
 
+  onTitle(){
+    this.texteAnimaux = "Animaux";
+    this.textePnj = "Pnj";
+    this.texteMobs = "Mobs";
+    this.typeEvent.emit("tout");
+  }
+
   onAnimaux(){
     if(this.texteAnimaux == "Animaux"){
       this.texteAnimaux = "Tout";
