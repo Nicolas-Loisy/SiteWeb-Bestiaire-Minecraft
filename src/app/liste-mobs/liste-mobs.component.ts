@@ -28,14 +28,14 @@ export class ListeMobsComponent implements OnInit {
     }
     else{
       if(this.typeAAfficher == "animal"){
-        this.titre="Liste des animaux:";
+        this.titre="Liste des animaux";
 
       }
       if(this.typeAAfficher == "pnj"){
-        this.titre="Liste des PNJs:";
+        this.titre="Liste des PNJs";
       }
       if(this.typeAAfficher == "mob"){
-        this.titre="Liste des mobs:";
+        this.titre="Liste des mobs";
       }
       this.myMobCards = [];
       this.allMyMobCards.forEach(x => {if(x.type==this.typeAAfficher){this.myMobCards.push(x)}});
