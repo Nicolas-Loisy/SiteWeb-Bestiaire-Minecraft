@@ -2,6 +2,9 @@ import { ViewportScroller } from '@angular/common';
 import { Component, OnInit, Input , OnChanges } from '@angular/core';
 import { MobCard } from '../models/mob-card.model';
 
+import { HttpClient } from '@angular/common/http';
+
+
 @Component({
   selector: 'app-liste-mobs',
   templateUrl: './liste-mobs.component.html',
@@ -19,7 +22,9 @@ export class ListeMobsComponent implements OnInit {
   imgHautDePage : string = "assets/img/scrollToTop1.png";
 
 
-  constructor(private scroller : ViewportScroller) { }
+  constructor(private scroller : ViewportScroller, public http : HttpClient) { 
+    this.readBD();
+  }
 
   changerAffichage(){
     if(this.typeAAfficher == "tout"){
@@ -52,86 +57,8 @@ export class ListeMobsComponent implements OnInit {
 
 
   ngOnInit() {
-    this.myMobCards = [
-      {
-        title: "Abeille",
-        description: "Les abeilles sont des animaux paissible, non agressif, que l'on trouve naturellement dans les plaines et forêts de fleurs. Les abeilles vivent naturellement dans des nids (ruche) qui se trouvent naturellement dans les arbres de ces biomes. jusqu'à 3 abeilles peuvent habiter dans haque nid. La journée, les abeilles sortent de la ruche pour butiner les fleurs. ",
-        image: "assets/img/Bee_types.gif",
-        nature: "Neutre",
-        type : "animal"
-      },
-      {
-        title: "Ender Dragon",
-        description: "L'Ender Dragon est le premier boss ajouté à Minecraft. Il apparait dans le monde The End et est le seul moyen de le quitter. Il se régénère automatiquement grâce aux Ender Crystaux. Lorsqu'on tue un dragon il apporte 12 000 points d'expérience ainsi qu'un portail vers la fin du jeu et son générique de fin. Il n'y a qu'un seul et unique Ender Dragon par partie. Depuis la version 1.9, il est possible de faire réapparaitre l'Ender Dragon.",
-        image: "assets/img/"+"Ender_Dragon.gif",
-        nature: "Hostile",
-        type : "mob"
-      },
-      {
-        title: "Creeper",
-        description: "Le creeper est une créature verte, pratiquement silencieuse, insidieuse et kamikaze. Une fois qu'il s'est assez rapproché du joueur, le creeper laissera échapper un sifflement sonore et explosera après 1 à 2 secondes. Les creepers sont silencieux quand ils ne bougent pas et ne prennent pas feu quand ils sont exposés à la lumière du soleil, contrairement aux zombies et aux squelettes. En revanche ils n'apparaissent que dans les endroits sombres (dans les cavernes ou la nuit). Lorsqu'ils sont frappés par la foudre, les creepers se chargent et se transforment alors en Creeper Electrifié.",
-        image: "assets/img/"+"Creeper_JE2_BE1.png",
-        nature: "Hostile",
-        type : "mob"
-      }
-      ,{
-        title: "Abeille",
-        description: "Les abeilles sont des animaux paissible, non agressif, que l'on trouve naturellement dans les plaines et forêts de fleurs. Les abeilles vivent naturellement dans des nids (ruche) qui se trouvent naturellement dans les arbres de ces biomes. jusqu'à 3 abeilles peuvent habiter dans haque nid. La journée, les abeilles sortent de la ruche pour butiner les fleurs. ",
-        image: "assets/img/Bee_types.gif",
-        nature: "Neutre",
-        type : "animal"
-      },
-      {
-        title: "Ender Dragon",
-        description: "L'Ender Dragon est le premier boss ajouté à Minecraft. Il apparait dans le monde The End et est le seul moyen de le quitter. Il se régénère automatiquement grâce aux Ender Crystaux. Lorsqu'on tue un dragon il apporte 12 000 points d'expérience ainsi qu'un portail vers la fin du jeu et son générique de fin. Il n'y a qu'un seul et unique Ender Dragon par partie. Depuis la version 1.9, il est possible de faire réapparaitre l'Ender Dragon.",
-        image: "assets/img/"+"Ender_Dragon.gif",
-        nature: "Hostile",
-        type : "mob"
-      },
-      {
-        title: "Abeille",
-        description: "Les abeilles sont des animaux paissible, non agressif, que l'on trouve naturellement dans les plaines et forêts de fleurs. Les abeilles vivent naturellement dans des nids (ruche) qui se trouvent naturellement dans les arbres de ces biomes. jusqu'à 3 abeilles peuvent habiter dans haque nid. La journée, les abeilles sortent de la ruche pour butiner les fleurs. ",
-        image: "assets/img/Bee_types.gif",
-        nature: "Neutre",
-        type : "animal"
-      },
-      {
-        title: "Ender Dragon",
-        description: "L'Ender Dragon est le premier boss ajouté à Minecraft. Il apparait dans le monde The End et est le seul moyen de le quitter. Il se régénère automatiquement grâce aux Ender Crystaux. Lorsqu'on tue un dragon il apporte 12 000 points d'expérience ainsi qu'un portail vers la fin du jeu et son générique de fin. Il n'y a qu'un seul et unique Ender Dragon par partie. Depuis la version 1.9, il est possible de faire réapparaitre l'Ender Dragon.",
-        image: "assets/img/"+"Ender_Dragon.gif",
-        nature: "Hostile",
-        type : "mob"
-      },
-      {
-        title: "Abeille",
-        description: "Les abeilles sont des animaux paissible, non agressif, que l'on trouve naturellement dans les plaines et forêts de fleurs. Les abeilles vivent naturellement dans des nids (ruche) qui se trouvent naturellement dans les arbres de ces biomes. jusqu'à 3 abeilles peuvent habiter dans haque nid. La journée, les abeilles sortent de la ruche pour butiner les fleurs. ",
-        image: "assets/img/Bee_types.gif",
-        nature: "Neutre",
-        type : "animal"
-      },
-      {
-        title: "Ender Dragon",
-        description: "L'Ender Dragon est le premier boss ajouté à Minecraft. Il apparait dans le monde The End et est le seul moyen de le quitter. Il se régénère automatiquement grâce aux Ender Crystaux. Lorsqu'on tue un dragon il apporte 12 000 points d'expérience ainsi qu'un portail vers la fin du jeu et son générique de fin. Il n'y a qu'un seul et unique Ender Dragon par partie. Depuis la version 1.9, il est possible de faire réapparaitre l'Ender Dragon.",
-        image: "assets/img/"+"Ender_Dragon.gif",
-        nature: "Hostile",
-        type : "mob"
-      },
-      {
-        title: "Abeille",
-        description: "Les abeilles sont des animaux paissible, non agressif, que l'on trouve naturellement dans les plaines et forêts de fleurs. Les abeilles vivent naturellement dans des nids (ruche) qui se trouvent naturellement dans les arbres de ces biomes. jusqu'à 3 abeilles peuvent habiter dans haque nid. La journée, les abeilles sortent de la ruche pour butiner les fleurs. ",
-        image: "assets/img/Bee_types.gif",
-        nature: "Neutre",
-        type : "animal"
-      },
-      {
-        title: "Ender Dragon",
-        description: "L'Ender Dragon est le premier boss ajouté à Minecraft. Il apparait dans le monde The End et est le seul moyen de le quitter. Il se régénère automatiquement grâce aux Ender Crystaux. Lorsqu'on tue un dragon il apporte 12 000 points d'expérience ainsi qu'un portail vers la fin du jeu et son générique de fin. Il n'y a qu'un seul et unique Ender Dragon par partie. Depuis la version 1.9, il est possible de faire réapparaitre l'Ender Dragon.",
-        image: "assets/img/"+"Ender_Dragon.gif",
-        nature: "Hostile",
-        type : "mob"
-      }
-    ];
-
+    this.myMobCards = [];
+    this.readBD();
     this.allMyMobCards = this.myMobCards;
 
 /*
@@ -151,5 +78,25 @@ export class ListeMobsComponent implements OnInit {
                                 "Hostile");
 */
   }
+
+  readApi(url:string){
+    return this.http.get(url);
+  };
+
+  readBD(){
+      this.readApi("http://localhost:8080/mobsBD")
+      .subscribe((data : any) => {
+        console.log("yo");
+        console.log(data[0]['title']);
+
+        for(let i = 0; i < data.length; i++){
+            this.myMobCards[i] = new MobCard(data[i]['title'],data[i]['description'],"assets/img/" + data[i]['image'],data[i]['nature'],data[i]['type']);
+        }
+
+
+      });
+  }
+
+
 
 }
