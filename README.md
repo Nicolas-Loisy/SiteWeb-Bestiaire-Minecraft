@@ -4,8 +4,9 @@ Groupe : Nicolas Loisy / Jason Horbacz / Axel Baudier
 Projet : Frontend + Backend en Spring et Angular
 Titre : Bestiaire Minecraft
 
+Bestiaire Minecraft : [ Angular/Sping ] Défi apprendre Angular en 3 jours
 
-# ProjWeb1
+# SiteWeb-Bestiaire-Minecraft
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
  
